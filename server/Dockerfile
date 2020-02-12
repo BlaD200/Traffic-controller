@@ -15,7 +15,7 @@ RUN pip install gunicorn
 RUN pip install eventlet
 
 # 4
-ENV PORT 8080
+ENV PORT 8000
 
 # Run the web service on container startup. Here we use the gunicorn
 # webserver, with one worker process and 8 threads.
