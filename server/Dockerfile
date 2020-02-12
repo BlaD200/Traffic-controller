@@ -22,4 +22,4 @@ ENV PORT 8000
 # For environments with multiple CPU cores, increase the number of workers
 # to be equal to the cores available.
 #CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 app:app
-CMD exec gunicorn --bind :$PORT -k eventlet -w 1 --threads 8 app:app
+CMD exec gunicorn -b :$PORT -k flask_sockets.worker app:app
